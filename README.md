@@ -1,5 +1,3 @@
-# Traffic-Deman-Prediction
-
 # Traffic Demand Prediction
 
 ## Project Overview
@@ -35,10 +33,15 @@ The features provided in the dataset (referenced from `Screenshot 2026-06-05 200
 ---
 
 ## Evaluation Metric
-The performance of the predictive model is evaluated based on the R² score, scaled to a maximum score of 100. 
 
-As documented in `Screenshot 2026-06-05 200810.png`, the scoring formula is:
-$$score = \max(0, 100 \times \text{metrics.r2\_score}(\text{actual}, \text{predicted}))$$
+The performance of the predictive model is evaluated based on the $R^2$ (Coefficient of Determination) score, scaled to a maximum score of 100. If the $R^2$ score is negative, the final score defaults to 0.
+
+The scoring formula is defined as:
+
+Score = max(0, 100 * r2_score(actual, predicted))
+
+* **Maximum Score:** 100 (Perfect prediction)
+* **Minimum Score:** 0 (Baseline performance or worse)$
 
 ---
 
